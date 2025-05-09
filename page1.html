@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BestHome - Option 1</title>
+  <title>SafeHome - Option 1</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Dropdown styles */
     .dropdown-content {
       opacity: 0;
       visibility: hidden;
@@ -16,8 +15,6 @@
       opacity: 1;
       visibility: visible;
     }
-    
-    /* Header styles */
     header {
       position: sticky;
       top: 0;
@@ -28,25 +25,20 @@
   </style>
 </head>
 <body class="bg-white text-gray-900 font-sans">
-  
-  <!-- Header (identical to your original) -->
   <header class="bg-blue-600 text-white p-4 text-xl font-bold flex items-center justify-between">
-    <a href="index.html" class="flex-1 text-center">BestHome</a>
-    
-    <!-- Dropdown Menu -->
+    <a href="index.html" class="flex-1 text-center">SafeHome</a>
     <div class="relative">
       <button id="dropdown-btn" class="focus:outline-none p-2">
         <img src="https://cdn-icons-png.freepik.com/512/4194/4194785.png" alt="Options" class="w-6 h-6">
       </button>
       <div id="dropdown-menu" class="dropdown-content absolute bg-white shadow-lg rounded-md mt-2 right-0 w-40 z-10">
-        <a href="page1.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Option 1</a>
+        <a href="page1.html" class="block px-4 py-2 text-sm text-blue-600 font-semibold hover:bg-gray-200">Option 1</a>
         <a href="page2.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Option 2</a>
         <a href="page3.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Option 3</a>
       </div>
     </div>
   </header>
 
-  <!-- Option 1 Content -->
   <section class="p-6">
     <h1 class="text-2xl font-bold mb-4">Option 1 Content</h1>
     <p class="mb-4">This is the content for Option 1 page.</p>
@@ -57,23 +49,19 @@
   </section>
 
   <script>
-    // Dropdown functionality
     document.addEventListener('DOMContentLoaded', function() {
       const dropdownBtn = document.getElementById('dropdown-btn');
       const dropdownMenu = document.getElementById('dropdown-menu');
       
-      // Toggle dropdown
       dropdownBtn.addEventListener('click', function(e) {
         e.stopPropagation();
         dropdownMenu.classList.toggle('show');
       });
       
-      // Close when clicking outside
       document.addEventListener('click', function() {
         dropdownMenu.classList.remove('show');
       });
       
-      // Keep open when clicking inside dropdown
       dropdownMenu.addEventListener('click', function(e) {
         e.stopPropagation();
       });
