@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BestHome Info</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Make the header sticky at the top of the page */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background-color: #1e40af;
+      width: 100%;
+    }
+
+    /* Dropdown styles */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: white;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      z-index: 100;
+      border-radius: 0.375rem;
+      margin-top: 0.5rem;
+      width: 160px;
+    }
+
+    .dropdown-content.show {
+      display: block;
+      animation: fadeIn 0.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+  
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-4 text-xl font-bold flex items-center justify-between">
+    <a href="index.html" class="flex-1 text-center">BestHome</a>  <!-- Changed main.html to index.html -->
+    
+    <!-- Dropdown Menu -->
+    <div class="relative">
+      <button id="dropdown-btn" class="focus:outline-none p-2">
+        <img src="https://cdn-icons-png.freepik.com/512/4194/4194785.png" alt="Options" class="w-6 h-6" />
+      </button>
+      <div id="dropdown-menu" class="dropdown-content">
+        <a href="page1.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Option 1</a>
+        <a href="page2.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Option 2</a>
+        <a href="page3.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Option 3</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Rest of your content -->
+  <div class="relative w-full h-60 overflow-hidden">
+    <div id="carousel" class="flex transition-transform duration-[1000ms] ease-in-out">
+      <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" class="w-full h-60 object-cover flex-shrink-0" />
+      <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" class="w-full h-60 object-cover flex-shrink-0" />
+      <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" class="w-full h-60 object-cover flex-shrink-0" />
+    </div>
+  </div>
+
+  <section class="p-6 text-center bg-gray-100">
+    <h1 class="text-2xl font-bold mb-2">Welcome to BestHome</h1>
+    <p class="text-base">Your trusted real estate source in Georgia.</p>
+  </section>
+
+  <section class="p-6">
+    <h2 class="text-xl font-semibold mb-2">About Us</h2>
+    <p class="text-sm">BestHome helps people across Georgia find homes, apartments, and offices with ease.</p>
+  </section>
+
+  <section class="p-6 bg-gray-100">
+    <h2 class="text-xl font-semibold mb-2">Contact</h2>
+    <p class="text-sm">📞 +995 599 12 34 56</p>
+    <p class="text-sm">📧 contact@besthome.ge</p>
+    <p class="text-sm">📍 Tbilisi, Georgia</p>
+  </section>
+
+  <footer class="text-center text-xs text-gray-500 p-4">
+    © 2025 BestHome. All rights reserved.
+  </footer>
+
+  <script>
+    // Carousel
+    const carousel = document.getElementById("carousel");
+    let currentIndex = 0;
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % 3;
+      carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }, 5000);
+
+    // Dropdown functionality
+    const dropdownBtn = document.getElementById("dropdown-btn");
+    const dropdownMenu = document.getElementById("dropdown-menu");
+
+    dropdownBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle("show");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
+        dropdownMenu.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>

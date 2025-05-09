@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BestHome Info</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Ensure dropdown content is hidden initially and transitions smoothly */
+    .dropdown-content {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    /* Dropdown is visible when 'show' class is added */
+    .dropdown-content.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Make the header sticky at the top of the page */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50; /* Higher z-index to ensure it stays on top */
+      background-color: #1e40af;
+      width: 100%;
+    }
+
+    /* Remove default body margin and add padding to prevent content from being hidden behind header */
+    body {
+      margin: 0;
+      padding-top: 0; /* Remove this as sticky header doesn't need it */
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+  
+  <!-- Header with clickable link to the main page -->
+  <header class="bg-blue-600 text-white p-4 text-xl font-bold flex items-center justify-between">
+    <!-- Make the entire header clickable to go to the main page -->
+    <a href="main.html" class="flex-1 text-center">BestHome</a>
+    
+    <!-- Dropdown Menu with Icon -->
+    <div class="relative">
+      <button class="focus:outline-none p-2">
+        <img src="https://cdn-icons-png.freepik.com/512/4194/4194785.png" alt="Options" class="w-6 h-6" />
+      </button>
+      <div class="dropdown-content absolute bg-white shadow-lg rounded-md mt-2 right-0 w-40 z-10">
+        <a href="page1.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Option 1</a>
+        <a href="page2.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Option 2</a>
+        <a href="page3.html" class="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-200">Option 3</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Image Carousel -->
+  <div class="relative w-full h-60 overflow-hidden">
+    <!-- Slides -->
+    <div id="carousel" class="flex transition-transform duration-[1200ms] ease-linear">
+      <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" class="w-full h-60 object-cover flex-shrink-0" />
+      <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" class="w-full h-60 object-cover flex-shrink-0" />
+      <img src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" class="w-full h-60 object-cover flex-shrink-0" />
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="p-6 text-center bg-gray-100">
+    <h1 class="text-2xl font-bold mb-2">Welcome to BestHome</h1>
+    <p class="text-base">Your trusted real estate source in Georgia.</p>
+  </section>
+
+  <!-- About Section -->
+  <section class="p-6">
+    <h2 class="text-xl font-semibold mb-2">About Us</h2>
+    <p class="text-sm">BestHome helps people across Georgia find homes, apartments, and offices with ease. We work with reliable partners and provide clear property info.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="p-6 bg-gray-100">
+    <h2 class="text-xl font-semibold mb-2">Contact</h2>
+    <p class="text-sm">📞 +995 599 12 34 56</p>
+    <p class="text-sm">📧 contact@besthome.ge</p>
+    <p class="text-sm">📍 Tbilisi, Georgia</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-xs text-gray-500 p-4">
+    © 2025 BestHome. All rights reserved.
+  </footer>
+
+  <!-- Carousel Script -->
+  <script>
+    const carousel = document.getElementById("carousel");
+    let currentIndex = 0;
+
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % 3;
+      carousel.style.transform = translateX(-${currentIndex * 100}%);
+    }, 5000); // Change every 5 seconds
+
+    // Dropdown toggle script with smooth transition
+    const dropdownButton = document.querySelector("header button");
+    const dropdownMenu = document.querySelector(".dropdown-content");
+
+    dropdownButton.addEventListener("click", () => {
+      dropdownMenu.classList.toggle("show");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (event) => {
+      if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.remove('show');
+      }
+    });
+  </script>
+
+</body>
+</html>
