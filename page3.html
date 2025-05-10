@@ -9,7 +9,24 @@
     :root {
       --primary-color: #113045;
       --primary-dark: #177e98;
-      --text-color: #c5cab6;
+      --text-color: #f0ffc3;
+    }
+    .text-section {
+      line-height: 1.6;
+      color: #153041;
+    }
+    .section-heading {
+      font-size: 1.75rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #153041;
+    }
+    .sub-heading {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #153041;
     }
     .dropdown-content {
       opacity: 0;
@@ -50,6 +67,16 @@
       align-items: center;
       flex-grow: 1;
     }
+    .divider {
+      width: 110px;
+      height: 2px;
+      background-color: #113045;
+      margin: 10px 0;
+    }
+    .divider1{
+    border-top: 2px solid #177e98;
+      margin: 20px 0;
+    }
   </style>
 </head>
 <body class="bg-white text-gray-900 font-sans">
@@ -58,12 +85,12 @@
     <div class="header-content">
       <div class="logo-section">
         <a href="index.html" class="flex items-center">
-          <img src="https://instagram.ftbs3-1.fna.fbcdn.net/v/t1.15752-9/494856223_2211322902634123_9140851152626685448_n.png?_nc_cat=101&ccb=7-5&_nc_sid=0024fc&_nc_ohc=dlYMlwNXZx4Q7kNvwGlXwCb&_nc_oc=Adlr6Y3FSQ1Or7hixvU_Pcwt5pozQJnhxWtsesnr_Zgg8sicz_9gnAz-eakZSNsfjFQ&_nc_zt=23&_nc_ht=instagram.ftbs3-1.fna&oh=03_Q7cD2QF5HMpaEbkHFOW21ylblpWgXHFG4qoWvoxE_jz8ohd-OA&oe=684618FC" 
-               alt="Logo" 
-               class="w-16 h-16 rounded-full object-cover">
-          <span class="text-base font-semibold ml-2" style="color: #c5cab6; font-size: 1.2rem;">SAFE HOME</span>
-        </a>
-        <div class="h-6 w-[1.5px] bg-[#c5cab6] bg-opacity-30 rounded-full mx-4"></div>
+        <img src="https://scontent.ftbs3-1.fna.fbcdn.net/v/t1.15752-9/494870515_693318823105724_5628651607596371403_n.png?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=MPN1tCZHyuYQ7kNvwHivHhf&_nc_oc=Adnpl9j6rm_nJX7UROgPfuUIaUMK-h81msj_xSheJXdbDuqfrr7fFDBDJy7jMtQfXgQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.ftbs3-1.fna&oh=03_Q7cD2QHGND35wGpA_qkSTCDsLjHLa7aaZZlnA3so2trskShXDg&oe=6846C8E8" 
+             alt="Logo" 
+             class="w-12 h-12 rounded-full object-cover">
+        <span class="text-base font-semibold ml-2" style="color: #f0ffc3; font-size: 1.2rem;">SAFE HOME</span>
+      </a>
+        <div class="h-6 w-[1.5px] bg-[#f0ffc3] bg-opacity-30 rounded-full mx-4"></div>
       </div>
 
       <!-- Georgian Flag Button -->
@@ -90,31 +117,52 @@
       <div class="relative">
         <button id="dropdown-btn" class="focus:outline-none p-2">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <circle cx="12" cy="6" r="2" fill="#c5cab6"/>
-            <circle cx="12" cy="12" r="2" fill="#c5cab6"/>
-            <circle cx="12" cy="18" r="2" fill="#c5cab6"/>
+            <circle cx="12" cy="6" r="2" fill="#f0ffc3"/>
+            <circle cx="12" cy="12" r="2" fill="#f0ffc3"/>
+            <circle cx="12" cy="18" r="2" fill="#f0ffc3"/>
           </svg>
         </button>
         <div id="dropdown-menu" class="dropdown-content fixed top-20 left-0 w-full bg-[#113045] shadow-lg z-50 overflow-hidden">
           <div class="container mx-auto p-4">
-            <a href="page1.html" class="block px-4 py-3 text-lg text-[#c5cab6] hover:bg-[#177e98] border-b border-[#177e98]">Option 1</a>
-            <a href="page2.html" class="block px-4 py-3 text-lg text-[#c5cab6] hover:bg-[#177e98] border-b border-[#177e98]">Option 2</a>
-            <a href="page3.html" class="block px-4 py-3 text-lg text-[#c5cab6] hover:bg-[#177e98]">Option 3</a>
-          </div>
+          <a href="page1.html" class="block px-4 py-3 text-lg text-[#f0ffc3] hover:bg-[#177e98] border-b border-[#177e98]">მომსახურება</a>
+          <a href="page2.html" class="block px-4 py-3 text-lg text-[#f0ffc3] hover:bg-[#177e98] border-b border-[#177e98]">ჩვენ შესახებ</a>
+          <a href="page3.html" class="block px-4 py-3 text-lg text-[#f0ffc3] hover:bg-[#177e98]">კონტაქტი</a>
+        </div>
         </div>
       </div>
     </div>
   </header>
-
   <!-- Page content for Option 1 -->
-  <section class="p-6">
-    <h1 class="text-2xl font-bold mb-4">Commercial Solutions</h1>
-    <p class="mb-4">Tailored real estate services for businesses and investors.</p>
-    <div class="bg-gray-100 p-4 rounded-lg">
-      <h2 class="text-lg font-semibold mb-2">Featured Office Space</h2>
-      <p>2,000 sqft modern office in central business district with fiber internet.</p>
+   
+  <section class="p-6 bg-gray-100">
+  <h2 class="text-xl font-semibold mb-2" style="color: #153041;">კონტაქტი</h2>
+  <div class="divider"></div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+    <!-- Phone Number Box -->
+    <div class="flex flex-col items-center bg-[#113045] text-white py-8 px-6 rounded-lg shadow-lg hover:bg-[#177e98] transition duration-300">
+      <p class="text-lg font-semibold mb-2">ნომერი</p>
+      <a href="tel:+995597944024" class="text-lg">+995 597 94 40 24</a>
     </div>
-  </section>
+      <div class="divider1"></div>
+
+    <!-- Email Box -->
+    <div class="flex flex-col items-center bg-[#113045] text-white py-8 px-6 rounded-lg shadow-lg hover:bg-[#177e98] transition duration-300">
+      <p class="text-lg font-semibold mb-2">ელ-ფოსტა</p>
+      <a href="mailto:contact@safehome.ge" class="text-lg">contact@safehome.ge</a>
+    </div>
+          <div class="divider1"></div>
+
+    <!-- Address Box -->
+    <div class="flex flex-col items-center bg-[#113045] text-white py-8 px-6 rounded-lg shadow-lg hover:bg-[#177e98] transition duration-300">
+      <p class="text-lg font-semibold mb-2">მისამართი</p>
+      <a href="https://www.google.com/maps/place/12a+ალექსანდრე+ყაზბეგის+გამზირი,+თბილისი+0160/@41.7252572,44.7596275,17z/data=!3m1!4b1!4m6!3m5!1s0x4044732004159aad:0x55f595fd0f15652e!8m2!3d41.7252572!4d44.7622024!16s%2Fg%2F11_sbsm5t?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">
+  ნახეთ რუკაზე ->
+    </div>
+          <div class="divider1"></div>
+
+    
+  </div>
+</section>
 
   <script>
     const dropdownBtn = document.getElementById("dropdown-btn");
