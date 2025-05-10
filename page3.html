@@ -61,6 +61,7 @@
       align-items: center;
       width: 100%;
       height: 100%;
+      color: #0c4351;
     }
     .logo-section {
       display: flex;
@@ -74,7 +75,7 @@
       margin: 10px 0;
     }
     .divider1{
-    border-top: 2px solid #177e98;
+      border-top: 2px solid #177e98;
       margin: 20px 0;
     }
   </style>
@@ -92,7 +93,7 @@
       </a>
         <div class="h-6 w-[1.5px] bg-[#f0ffc3] bg-opacity-30 rounded-full mx-4"></div>
       </div>
-
+      
       <!-- Georgian Flag Button -->
       <div class="relative mx-4">
         <button id="language-btn" class="focus:outline-none p-1">
@@ -124,45 +125,57 @@
         </button>
         <div id="dropdown-menu" class="dropdown-content fixed top-20 left-0 w-full bg-[#113045] shadow-lg z-50 overflow-hidden">
           <div class="container mx-auto p-4">
-          <a href="page1.html" class="block px-4 py-3 text-lg text-[#f0ffc3] hover:bg-[#177e98] border-b border-[#177e98]">მომსახურება</a>
-          <a href="page2.html" class="block px-4 py-3 text-lg text-[#f0ffc3] hover:bg-[#177e98] border-b border-[#177e98]">ჩვენ შესახებ</a>
-          <a href="page3.html" class="block px-4 py-3 text-lg text-[#f0ffc3] hover:bg-[#177e98]">კონტაქტი</a>
+          <a href="page1.html" class="block px-4 py-3 text-lg text-[#f0ffc3;] hover:bg-[#177e98] border-b border-[#177e98]">მომსახურება</a>
+          <a href="page2.html" class="block px-4 py-3 text-lg text-[#f0ffc3;] hover:bg-[#177e98] border-b border-[#177e98]">ჩვენ შესახებ</a>
+          <a href="page3.html" class="block px-4 py-3 text-lg text-[#f0ffc3;] hover:bg-[#177e98] border-b border-[#177e98]">კონტაქტი</a>
+          <a href="vakansia.html" class="block px-4 py-3 text-lg text-[#f0ffc3;] hover:bg-[#177e98] border-b border-[#177e98]">ვაკანსია</a>
+
         </div>
         </div>
       </div>
     </div>
   </header>
+
   <!-- Page content for Option 1 -->
-   
   <section class="p-6 bg-gray-100">
-  <h2 class="text-xl font-semibold mb-2" style="color: #153041;">კონტაქტი</h2>
-  <div class="divider"></div>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-    <!-- Phone Number Box -->
-    <div class="flex flex-col items-center bg-[#113045] text-white py-8 px-6 rounded-lg shadow-lg hover:bg-[#177e98] transition duration-300">
-      <p class="text-lg font-semibold mb-2">ნომერი</p>
-      <a href="tel:+995597944024" class="text-lg">+995 597 94 40 24</a>
-    </div>
+    <h2 class="text-xl font-semibold mb-2" style="color: #153041;">კონტაქტი</h2>
+    <div class="divider"></div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+      <!-- Phone Number Box -->
+      <a href="tel:+995597944024" class="flex flex-col items-center bg-[#113045] text-white py-8 px-6 rounded-lg shadow-lg hover:bg-[#177e98] transition duration-300">
+        <img src="https://cdn-icons-png.freepik.com/256/4436/4436746.png?semt=ais_hybrid" alt="Phone" class="w-8 h-8 mb-4">
+        <p class="text-lg font-semibold mb-2">ნომერი</p>
+        <span class="text-lg"></span>
+      </a>
+
+      <div class="divider1"></div>
+      <a href="https://wa.me/+995597944024" class="flex flex-col items-center bg-[#113045] text-white py-8 px-6 rounded-lg shadow-lg hover:bg-[#177e98] transition duration-300">
+        <img src="https://img.icons8.com/m_outlined/512/40C057/whatsapp.png" alt="WhatsApp" class="w-8 h-8 mb-4">
+        <p class="text-lg font-semibold mb-2">WhatsApp</p>
+        <span class="text-lg"></span>
+      </a>
+            <div class="divider1"></div>
+
+
+      <!-- Email Box -->
+      <a href="safehomeagency22@gmail.com" class="flex flex-col items-center bg-[#113045] text-white py-8 px-6 rounded-lg shadow-lg hover:bg-[#177e98] transition duration-300">
+        <img src="https://openclipart.org/image/2000px/285440" alt="Email" class="w-8 h-8 mb-4">
+        <p class="text-lg font-semibold mb-2">ელ-ფოსტა</p>
+        <span class="text-lg"></span>
+      </a>
+
       <div class="divider1"></div>
 
-    <!-- Email Box -->
-    <div class="flex flex-col items-center bg-[#113045] text-white py-8 px-6 rounded-lg shadow-lg hover:bg-[#177e98] transition duration-300">
-      <p class="text-lg font-semibold mb-2">ელ-ფოსტა</p>
-      <a href="mailto:contact@safehome.ge" class="text-lg">contact@safehome.ge</a>
-    </div>
-          <div class="divider1"></div>
+      <!-- Address Box -->
+      <a href="https://www.google.com/maps/place/12a+ალექსანდრე+ყაზბეგის+გამზირი,+თბილისი+0160/@41.7252572,44.7596275,17z/data=!3m1!4b1!4m6!3m5!1s0x4044732004159aad:0x55f595fd0f15652e!8m2!3d41.7252572!4d44.7622024!16s%2Fg%2F11_sbsm5t?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank" class="flex flex-col items-center bg-[#113045] text-white py-8 px-6 rounded-lg shadow-lg hover:bg-[#177e98] transition duration-300">
+        <img src="https://cdn1.iconfinder.com/data/icons/basic-ui-elements-color-round/3/49-512.png" alt="Address" class="w-8 h-8 mb-4">
+        <p class="text-lg font-semibold mb-2">მისამართი</p>
+        <span class="text-lg"></span>
+      </a>
 
-    <!-- Address Box -->
-    <div class="flex flex-col items-center bg-[#113045] text-white py-8 px-6 rounded-lg shadow-lg hover:bg-[#177e98] transition duration-300">
-      <p class="text-lg font-semibold mb-2">მისამართი</p>
-      <a href="https://www.google.com/maps/place/12a+ალექსანდრე+ყაზბეგის+გამზირი,+თბილისი+0160/@41.7252572,44.7596275,17z/data=!3m1!4b1!4m6!3m5!1s0x4044732004159aad:0x55f595fd0f15652e!8m2!3d41.7252572!4d44.7622024!16s%2Fg%2F11_sbsm5t?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">
-  ნახეთ რუკაზე ->
+      
     </div>
-          <div class="divider1"></div>
-
-    
-  </div>
-</section>
+  </section>
 
   <script>
     const dropdownBtn = document.getElementById("dropdown-btn");

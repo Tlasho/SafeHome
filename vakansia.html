@@ -4,38 +4,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SafeHome - Option 1</title>
-
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom Styles -->
   <style>
     :root {
-      --primary-color: #113045;     /* Dark blue background */
-      --primary-dark: #177e98;      /* Hover blue */
-      --text-color: #f0ffc3;        /* Light yellow text */
+      --primary-color: #113045;
+      --primary-dark: #177e98;
+      --text-color: #f0ffc3;
+      --idk-color:#153041
     }
-
-    /* Smooth dropdown animation */
+    .text-section {
+      line-height: 1.6;
+      color: #153041;
+    }
+    .section-heading {
+      font-size: 1.75rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #153041;
+    }
+    .sub-heading {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #153041;
+    }
     .dropdown-content {
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.3s ease, visibility 0.3s ease;
     }
-
-    /* Shown state for dropdown */
     .dropdown-content.show {
       opacity: 1;
       visibility: visible;
     }
-
-    /* Custom divider style */
-    .divider {
-      border-top: 2px solid #177e98;
-      margin: 20px 0;
-    }
-
-    /* Sticky header at top */
     header {
       position: sticky;
       top: 0;
@@ -43,8 +45,6 @@
       background-color: var(--primary-color);
       width: 100%;
     }
-
-    /* Utility classes */
     .bg-primary {
       background-color: var(--primary-color);
     }
@@ -54,50 +54,51 @@
     .text-primary {
       color: var(--primary-color);
     }
-
     body {
       background-color: #0c4351;
     }
-
     .header-content {
       display: flex;
       align-items: center;
       width: 100%;
       height: 100%;
     }
-
     .logo-section {
       display: flex;
       align-items: center;
       flex-grow: 1;
     }
+    .divider {
+      width: 90px;
+      height: 2px;
+      background-color: #113045;
+      margin: 10px 0;
+    }
+    .divider1{
+    border-top: 2px solid #177e98;
+      margin: 20px 0;
+    }
   </style>
 </head>
-
 <body class="bg-white text-gray-900 font-sans">
-  <!-- Top navigation header -->
+
   <header class="bg-primary text-white h-20 px-4 text-xl font-bold">
     <div class="header-content">
-
-      <!-- Logo and name -->
       <div class="logo-section">
         <a href="index.html" class="flex items-center">
-          <img src="https://scontent.ftbs3-1.fna.fbcdn.net/v/t1.15752-9/494870515_693318823105724_5628651607596371403_n.png?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=MPN1tCZHyuYQ7kNvwHivHhf&_nc_oc=Adnpl9j6rm_nJX7UROgPfuUIaUMK-h81msj_xSheJXdbDuqfrr7fFDBDJy7jMtQfXgQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.ftbs3-1.fna&oh=03_Q7cD2QHGND35wGpA_qkSTCDsLjHLa7aaZZlnA3so2trskShXDg&oe=6846C8E8"
-               alt="Logo"
-               class="w-12 h-12 rounded-full object-cover">
-          <span class="text-base font-semibold ml-2" style="color: #f0ffc3; font-size: 1.2rem;">SAFE HOME</span>
-        </a>
-        <!-- Vertical line divider -->
+        <img src="https://scontent.ftbs3-1.fna.fbcdn.net/v/t1.15752-9/494870515_693318823105724_5628651607596371403_n.png?_nc_cat=111&ccb=1-7&_nc_sid=0024fc&_nc_ohc=MPN1tCZHyuYQ7kNvwHivHhf&_nc_oc=Adnpl9j6rm_nJX7UROgPfuUIaUMK-h81msj_xSheJXdbDuqfrr7fFDBDJy7jMtQfXgQ&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.ftbs3-1.fna&oh=03_Q7cD2QHGND35wGpA_qkSTCDsLjHLa7aaZZlnA3so2trskShXDg&oe=6846C8E8" 
+             alt="Logo" 
+             class="w-12 h-12 rounded-full object-cover">
+        <span class="text-base font-semibold ml-2" style="color: #f0ffc3; font-size: 1.2rem;">SAFE HOME</span>
+      </a>
         <div class="h-6 w-[1.5px] bg-[#f0ffc3] bg-opacity-30 rounded-full mx-4"></div>
       </div>
 
-      <!-- Language selector (Georgian default) -->
+      <!-- Georgian Flag Button -->
       <div class="relative mx-4">
         <button id="language-btn" class="focus:outline-none p-1">
           <img src="https://flagcdn.com/w20/ge.png" alt="Georgian" class="w-6 h-auto rounded-sm">
         </button>
-
-        <!-- Language dropdown -->
         <div id="language-menu" class="hidden absolute right-0 mt-2 w-20 bg-[#113045] rounded-md shadow-lg z-50 border border-[#177e98]">
           <a href="?lang=ge" class="block px-2 py-2 text-center hover:bg-[#177e98]">
             <img src="https://flagcdn.com/w20/ge.png" alt="Georgian" class="w-6 h-auto mx-auto rounded-sm">
@@ -113,18 +114,15 @@
         </div>
       </div>
 
-      <!-- Options button (three dots) -->
+      <!-- Options Button -->
       <div class="relative">
         <button id="dropdown-btn" class="focus:outline-none p-2">
-          <!-- SVG Icon -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <circle cx="12" cy="6" r="2" fill="#f0ffc3"/>
             <circle cx="12" cy="12" r="2" fill="#f0ffc3"/>
             <circle cx="12" cy="18" r="2" fill="#f0ffc3"/>
           </svg>
         </button>
-
-        <!-- Full-width dropdown menu -->
         <div id="dropdown-menu" class="dropdown-content fixed top-20 left-0 w-full bg-[#113045] shadow-lg z-50 overflow-hidden">
           <div class="container mx-auto p-4">
           <a href="page1.html" class="block px-4 py-3 text-lg text-[#f0ffc3;] hover:bg-[#177e98] border-b border-[#177e98]">მომსახურება</a>
@@ -137,47 +135,65 @@
       </div>
     </div>
   </header>
+  <!-- Page content for Option 1 -->
+   
+    <section class="p-6">
+        <h2 class="text-xl font-semibold mb-2" style="color: var(--primary-color);">ვაკანსია</h2>
+        <div class="divider"></div>
+    <h2 class="text-xl font-semibold mb-2" style="color: var(--primary-color);">(ჩაწიე ქვემოთ გასაუბრებისათვის)</h2>
+    <p class="mb-4 text-[--idk-color]">დასაქმდი მაღალანაზღაურებად სფეროში — გამოცდილების გარეშეც!</p>
+    <div class="divider1"></div>
 
-  <!-- Main page content -->
-  <section class="p-6">
-    <h1 class="section-heading text-2xl font-bold text-[#0c4351]">SafeHome.ge</h1>
-    <div class="divider"></div>
+<p class="mb-4 text-[--idk-color]">
+  გინდა დაიწყო კარიერა, სადაც წარმატება არ მოითხოვს წლების გამოცდილებას?<br>
+  შემოდი უძრავი ქონების სამყაროში SafeHome-თან ერთად და იქეცი პროფესიონალად ჩვენი გუნდის მხარდაჭერით!
+</p>
+<div class="divider1"></div>
 
-    <!-- Company description -->
-    <p class="text-section mb-6 text-[#153041]">
-      არის უძრავი ქონების თანამედროვე სააგენტო, რომელიც გთავაზობთ გაყიდვის, გაქირავებისა და ყიდვის სრულ პროცესს ერთ სივრცეში. 
-      ჩვენ გვჯერა, რომ პროფესიონალური მიდგომა, მჭიდრო კომუნიკაცია და ინდივიდუალური სტრატეგია ქმნის წარმატებულ გარიგებებს.
-    </p>
-    <div class="divider"></div>
+<p class="font-semibold mt-4 text-[--primary-color]">რატომ SafeHome?</p>
+<ul class="list-disc list-inside mb-4 text-[--idk-color]">
+  <li>პირველივე დღიდან მიიღებ რეალურ შესაძლებლობას ფულის მოსაპოვებლად</li>
+  <li>ჩვენ გაწვდით ცოდნას, ინსტრუმენტებს და ბაზას წარმატებისთვის</li>
+  <li>იშოვი იმაზე მეტს, ვიდრე სტანდარტულ სამსახურში, შენი ძალისხმევის შესაბამისად</li>
+</ul>
+<div class="divider1"></div>
 
-    <p class="text-section mb-6 text-[#153041]">
-      ჩვენი მისიაა, ვაქციოთ უძრავი ქონების სფერო ხელმისაწვდომად, გამჭვირვალედ და ეფექტურად ყველასთვის.
-    </p>
-    <div class="divider"></div>
+<p class="font-semibold mt-4 text-[--primary-color]">შენგან გვჭირდება მხოლოდ:</p>
+<ul class="list-disc list-inside mb-4 text-[--idk-color]">
+  <li>მოტივაცია და სურვილი ისწავლო</li>
+  <li>კომუნიკაბელურობა და პოზიტიური ენერგია</li>
+  <li>პასუხისმგებლობა და მიზანდასახულობა</li>
+</ul>
+<div class="divider1"></div>
 
-    <!-- Features list -->
-    <div class="bg-gray-100 p-4 rounded-lg">
-      <h2 class="text-lg font-semibold mb-2">🌟 ჩვენთან მუშაობით მიიღებთ:</h2>
-      <ul class="list-disc pl-5 text-[#153041]">
-        <li>სწრაფ რეაგირებას</li>
-        <li>პროფესიონალ აგენტებს</li>
-        <li>თანამედროვე მარკეტინგულ სტრატეგიებს</li>
-        <li>მხარდაჭერას თითოეულ ეტაპზე</li>
-      </ul>
-    </div>
+<p class="font-semibold mt-4 text-[--primary-color]">ჩვენგან მიიღებ:</p>
+<ul class="list-disc list-inside mb-4 text-[--idk-color]">
+  <li>ტრენინგებს და მენტორის მხარდაჭერას</li>
+  <li>მოქნილ სამუშაო გრაფიკს</li>
+  <li>მაღალ ანაზღაურებას თითოეულ წარმატებულ გარიგებაზე</li>
+</ul>
+<div class="divider1"></div>
 
-    <!-- Final quote -->
-    <p class="text-section mt-6">💬 “ჩვენ ვიცავთ თქვენს ინტერესებს როგორც საკუთარს”</p>
+<p class="mt-6 font-semibold text-[--primary-color]">ჩაუყარე შენს კარიერას დღესვე საფუძველი — ჩვენთან ერთად!</p>
+<div class="mt-6 flex justify-center">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSehZaTEI3uuM5DEtaxGrhky94U1Lyst1bFHYPWAHuYizXLYeA/viewform" 
+     class="inline-block px-6 py-3 rounded-md font-semibold text-white bg-[--primary-color] hover:bg-[#0f5c70] shadow-md hover:shadow-lg transition duration-300 text-center cursor-pointer">
+    დარეგისტრირდი გასაუბრებაზე!
+  </a>
+</div>
+
+
+
+
   </section>
 
-  <!-- JavaScript for dropdown and language menu toggling -->
+
   <script>
     const dropdownBtn = document.getElementById("dropdown-btn");
     const dropdownMenu = document.getElementById("dropdown-menu");
     const languageBtn = document.getElementById("language-btn");
     const languageMenu = document.getElementById("language-menu");
 
-    // Toggle options menu
     dropdownBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       dropdownMenu.classList.toggle("show");
@@ -185,14 +201,12 @@
       document.body.style.overflow = dropdownMenu.classList.contains("show") ? "hidden" : "";
     });
 
-    // Toggle language menu
     languageBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       languageMenu.classList.toggle("hidden");
       dropdownMenu.classList.remove("show");
     });
 
-    // Close menus when clicking outside
     document.addEventListener('click', (e) => {
       if (!dropdownBtn.contains(e.target) && !dropdownMenu.contains(e.target)) {
         dropdownMenu.classList.remove('show');
