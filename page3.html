@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SafeHome - Option 3</title>
+  <title>SafeHome - Option 1</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
       --primary-color: #113045;
       --primary-dark: #177e98;
+      --text-color: #c5cab6;
     }
     .dropdown-content {
       opacity: 0;
@@ -35,23 +36,37 @@
     .text-primary {
       color: var(--primary-color);
     }
-    body{
+    body {
       background-color: #0c4351;
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+    .logo-section {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
     }
   </style>
 </head>
 <body class="bg-white text-gray-900 font-sans">
+
   <header class="bg-primary text-white h-20 px-4 text-xl font-bold">
-    <div class="header-content flex items-center justify-between">
-      <div class="logo-section flex items-center gap-2">
+    <div class="header-content">
+      <div class="logo-section">
         <a href="index.html" class="flex items-center">
-          <img src="https://instagram.ftbs3-1.fna.fbcdn.net/v/t1.15752-9/494856223_2211322902634123_9140851152626685448_n.png?_nc_cat=101&ccb=7-5&_nc_sid=0024fc&_nc_ohc=dlYMlwNXZx4Q7kNvwGlXwCb&_nc_oc=Adlr6Y3FSQ1Or7hixvU_Pcwt5pozQJnhxWtsesnr_Zgg8sicz_9gnAz-eakZSNsfjFQ&_nc_zt=23&_nc_ht=instagram.ftbs3-1.fna&oh=03_Q7cD2QF5HMpaEbkHFOW21ylblpWgXHFG4qoWvoxE_jz8ohd-OA&oe=684618FC" alt="Logo" class="w-16 h-16 rounded-full object-cover">
+          <img src="https://instagram.ftbs3-1.fna.fbcdn.net/v/t1.15752-9/494856223_2211322902634123_9140851152626685448_n.png?_nc_cat=101&ccb=7-5&_nc_sid=0024fc&_nc_ohc=dlYMlwNXZx4Q7kNvwGlXwCb&_nc_oc=Adlr6Y3FSQ1Or7hixvU_Pcwt5pozQJnhxWtsesnr_Zgg8sicz_9gnAz-eakZSNsfjFQ&_nc_zt=23&_nc_ht=instagram.ftbs3-1.fna&oh=03_Q7cD2QF5HMpaEbkHFOW21ylblpWgXHFG4qoWvoxE_jz8ohd-OA&oe=684618FC" 
+               alt="Logo" 
+               class="w-16 h-16 rounded-full object-cover">
           <span class="text-base font-semibold ml-2" style="color: #c5cab6; font-size: 1.2rem;">SAFE HOME</span>
         </a>
         <div class="h-6 w-[1.5px] bg-[#c5cab6] bg-opacity-30 rounded-full mx-4"></div>
       </div>
-      
-      <!-- Language Button -->
+
+      <!-- Georgian Flag Button -->
       <div class="relative mx-4">
         <button id="language-btn" class="focus:outline-none p-1">
           <img src="https://flagcdn.com/w20/ge.png" alt="Georgian" class="w-6 h-auto rounded-sm">
@@ -70,7 +85,7 @@
           </a>
         </div>
       </div>
-      
+
       <!-- Options Button -->
       <div class="relative">
         <button id="dropdown-btn" class="focus:outline-none p-2">
@@ -91,6 +106,7 @@
     </div>
   </header>
 
+  <!-- Page content for Option 1 -->
   <section class="p-6">
     <h1 class="text-2xl font-bold mb-4">Commercial Solutions</h1>
     <p class="mb-4">Tailored real estate services for businesses and investors.</p>
